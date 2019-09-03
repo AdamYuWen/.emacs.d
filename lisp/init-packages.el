@@ -1,20 +1,26 @@
 ;; Add resources for packages
 (when (>= emacs-major-version 24)
   (require 'package)
-  (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
-  )
+  (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t))
+
+;; cl - Comman Lisp Extension
 (require 'cl)
 
-;; Add packages
+;; Add Packages
 (defvar adamyuwen/packages '(
+			     ;; --- Auto-completion ---
 			     company
-			     monokai-theme
+			     ;; --- Better Editor ---
 			     hungry-delete
 			     swiper
 			     counsel
 			     smartparens
 			     popwin
-			     )  "Default packages")
+			     ;; --- Major Mode ---
+			     ;; --- Minor Mode ---
+			     ;; --- Themes ---
+			     monokai-theme
+			     ) "Default packages")
 
 (setq package-selected-packages adamyuwen/packages)
 
@@ -30,11 +36,8 @@
     (when (not (package-installed-p pkg))
       (package-install pkg))))
 
-;; Set the company mode
+;; Package company
 (global-company-mode t)
-
-;; Set theme
-(load-theme 'monokai t)
 
 ;; Package hungry-delete
 (require 'hungry-delete)
@@ -45,12 +48,14 @@
 (setq ivy-use-virtual-buffers t)
 
 ;; Package smartparents
-(require 'smartparens-config)
 (smartparens-global-mode t)
 
 ;; Package popwin
 (require 'popwin)
 (popwin-mode t)
+
+;; Set theme
+(load-theme 'monokai t)
 
 
 ;; Link with the init.el
