@@ -49,6 +49,7 @@
 
 ;; Package smartparents
 (smartparens-global-mode t)
+(sp-local-pair 'emacs-lisp-mode "'" nil :actions nil) ;; In emacs-lisp, won't pair ' sign
 
 ;; Package popwin
 (require 'popwin)

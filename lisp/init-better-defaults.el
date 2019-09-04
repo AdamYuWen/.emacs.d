@@ -28,6 +28,14 @@
 ;; Replace the selected text
 (delete-selection-mode t)
 
+;; Shows the matched parentheses, when in the parentheses
+(define-advice show-paren-function (:around (fn) fix-show-paren-function)
+  "Highlight enclosing parens."
+  (cond ((looking-at-p "\\s(") (funcall fn))
+        (t (save-excursion
+             (ignore-errors (backward-up-list))
+             (funcall fn)))))
+
 ;; Shows the matched parentheses
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
