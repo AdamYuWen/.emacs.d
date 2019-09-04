@@ -13,7 +13,17 @@
 (global-set-key (kbd "C-x v") 'counsel-describe-variable)
 
 ;; counsel-git
-(global-set-key (kbd "C-c p f" 'counsel-git))
+(global-set-key (kbd "C-c p f") 'counsel-git)
+
+;; indent-buffer
+(global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
+
+;; hippie completion
+(global-set-key (kbd "s-/") 'hippie-expand)
+
+;; dired mode
+(with-eval-after-load 'dired
+  (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 
 
 ;; Link with the init.el
