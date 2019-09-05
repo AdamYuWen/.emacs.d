@@ -9,8 +9,8 @@
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 (global-set-key (kbd "M-x") 'counsel-M-x)
 (global-set-key (kbd "C-x C-f") 'counsel-find-file)
-(global-set-key (kbd "C-x f") 'counsel-describe-function)
-(global-set-key (kbd "C-x v") 'counsel-describe-variable)
+(global-set-key (kbd "C-h f") 'counsel-describe-function)
+(global-set-key (kbd "C-h v") 'counsel-describe-variable)
 
 ;; counsel-git
 (global-set-key (kbd "C-c p f") 'counsel-git)
@@ -24,6 +24,9 @@
 ;; dired mode
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
+
+;; occur-dwim
+(global-set-key (kbd "M-s o") 'occur-dwim)
 
 
 ;; Link with the init.el
