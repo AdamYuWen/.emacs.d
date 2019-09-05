@@ -16,6 +16,8 @@
 			     counsel
 			     smartparens
 			     popwin
+			     expand-region
+			     iedit
 			     ;; --- Major Mode ---
 			     ;; --- Minor Mode ---
 			     ;; --- Themes ---
@@ -40,7 +42,6 @@
 (global-company-mode t)
 
 ;; Package hungry-delete
-(require 'hungry-delete)
 (global-hungry-delete-mode)
 
 ;; Package swiper
@@ -54,6 +55,9 @@
 ;; Package popwin
 (require 'popwin)
 (popwin-mode t)
+
+;; Package iedit
+(require 'iedit)
 
 ;; Set theme
 (load-theme 'monokai t)

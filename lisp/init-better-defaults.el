@@ -92,6 +92,7 @@
               (regexp-quote sym))))
         regexp-history)
   (call-interactively 'occur))
+(push '(occur-mode :width 90 :position right) popwin:special-display-config)
 
 
 ;; Link with the init.el
