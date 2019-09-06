@@ -35,8 +35,9 @@
 ;; expand-region
 (global-set-key (kbd "C-=") 'er/expand-region)
 
-;; iedit
-;;(global-set-key (kbd "C-;") 'iedit-mode)
+;; org mode
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c r") 'org-capture)
 
 
 ;; Link with the init.el

@@ -18,6 +18,7 @@
 			     popwin
 			     expand-region
 			     iedit
+			     org-pomodoro
 			     ;; --- Major Mode ---
 			     ;; --- Minor Mode ---
 			     ;; --- Themes ---
