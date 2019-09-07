@@ -19,6 +19,8 @@
 			     expand-region
 			     iedit
 			     org-pomodoro
+			     helm-ag
+			     exec-path-from-shell
 			     ;; --- Major Mode ---
 			     ;; --- Minor Mode ---
 			     ;; --- Themes ---
@@ -62,6 +64,12 @@
 
 ;; Set theme
 (load-theme 'monokai t)
+
+;; When using helm-ag, there was an error message
+;; "Error running time: (error "Candidates function 'helm-ag--do-ag-candidate-process' should run a process")"
+;; To solve this issue, a package called "exec-path-from-shell" and the following were added.
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
 
 
 ;; Link with the init.el
