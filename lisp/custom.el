@@ -1,8 +1,3 @@
-;; Package company mode features
-(setq-default company-idle-delay 0.08)
-(setq-default company-minimum-prefix-length 1)
-
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

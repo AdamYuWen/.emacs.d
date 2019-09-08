@@ -52,6 +52,9 @@
 
 ;; Package company
 (global-company-mode t)
+;; Package company mode features
+(setq-default company-idle-delay 0.08)
+(setq-default company-minimum-prefix-length 1)
 
 ;; Package hungry-delete
 (global-hungry-delete-mode)
