@@ -20,7 +20,7 @@
 (global-set-key (kbd "C-h v") 'counsel-describe-variable)
 
 ;; counsel-git
-(global-set-key (kbd "C-c p f") 'counsel-git)
+;; (global-set-key (kbd "C-c p f") 'counsel-git)
 ;; counsel-im
 (global-set-key (kbd "C-c i") 'counsel-imenu)
 
@@ -50,7 +50,7 @@
 (global-set-key (kbd "C-;") 'iedit-mode)
 
 ;; helm-ag
-(global-set-key (kbd "C-c p s") 'helm-do-ag-project-root)
+;; (global-set-key (kbd "C-c p s") 'helm-do-ag-project-root)
 
 ;; auto-yasnippets
 (global-set-key (kbd "C-c w") #'aya-create)
@@ -58,6 +58,24 @@
 
 ;; delete words
 (global-set-key (kbd "C-w") 'backward-kill-word)
+
+;; evil-leader
+(evil-leader/set-key
+  "ff" 'find-file
+  "fr" 'recentf-open-files
+  "bb" 'switch-to-buffer
+  "bk" 'kill-buffer
+  "pf" 'counsel-git
+  "ps" 'helm-do-ag-project-root
+  "0" 'select-window-0
+  "1" 'select-window-1
+  "2" 'select-window-2
+  "3" 'select-window-3
+  "4" 'select-window-4
+  "wm" 'delete-other-windows)
+
+;; window-numbering
+(window-numbering-mode t)
 
 
 ;; Link with the init.el
