@@ -52,6 +52,13 @@
 ;; helm-ag
 (global-set-key (kbd "C-c p s") 'helm-do-ag-project-root)
 
+;; auto-yasnippets
+(global-set-key (kbd "C-c w") #'aya-create)
+(global-set-key (kbd "C-c y") #'aya-expand)
+
+;; delete words
+(global-set-key (kbd "C-w") 'backward-kill-word)
+
 
 ;; Link with the init.el
 (provide 'init-keybindings)

@@ -21,8 +21,11 @@
 			     org-pomodoro
 			     helm-ag
 			     exec-path-from-shell
-			     ;; --- Major Mode ---
+			     flycheck
 			     ;; --- Minor Mode ---
+			     yasnippet
+			     auto-yasnippet
+			     ;; --- Major Mode ---
 			     ;; --- Themes ---
 			     monokai-theme
 			     ) "Default packages")
@@ -71,6 +74,15 @@
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
+;; flycheck mode
+;; TODO: It only works for js mode. Change it later.
+(add-hook 'js2-mode-hook 'flycheck-mode)
+
+;; yasnippet
+;; It only works for programming language now.
+(require 'yasnippet)
+(yas-reload-all)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
 
 ;; Link with the init.el
 (provide 'init-packages)
